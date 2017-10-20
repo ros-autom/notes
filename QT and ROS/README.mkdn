@@ -29,13 +29,13 @@
 6)Πηγαίνουμε στη διανομή του ROS μας και ανοιγουμε το αρχειο src/CMakeLists.txt το οποίο είναι symlink
 
 	Έστω 
-	sudo gedit ~/ros/husky_kinetic/src/CMakeLists.txt
+	sudo gedit ~/ros/husky-kinetic/src/CMakeLists.txt
 
 7)Αντιγράφουμε όλο το περιεχόμενο σε ένα νέο αρχείο και το κρατάμε ανοιχτό
 
 8)Διαγράφουμε το παρόν CMakeLists.txt αρχείο (Απαιτεί δικαιώματα υπερχρήστη)
 
-	rm -rf ~/ros/husky_kinetic/src/CMakeLists.txt
+	rm -rf ~/ros/husky-kinetic/src/CMakeLists.txt
 
 9)Αποθηκεύουμε το αρχείο που έχουμε ανοιχτό με όνομα **CMakeLists.txt**
 
