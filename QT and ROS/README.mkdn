@@ -1,0 +1,84 @@
+# Εγκατάσταση του QT
+---------------
+
+Εκτελούμε 
+	
+	sudo apt-get install qtcreator
+
+# Σύνδεση ROS με QT
+---------------
+
+1)Εκτελούμε 
+
+	sudo apt-get install ros-indigo-qt-create 
+
+	sudo apt-get install ros-indigo-qt-build
+
+2)Ανοίγουμε, ως υπερχρήστες, το αρχείο /usr/share/applications/qtcreator.desktop
+
+	sudo gedit /usr/share/applications/qtcreator.desktop
+
+3)Αλλάζουμε την εκχώρηση του Exec= σε 
+
+	Exec=bash -i -c qtcreator %F
+
+4)Κλείνουμε το αρχείο
+
+5)Κάνουμε ενα catkin_make
+
+6)Πηγαίνουμε στη διανομή του ROS μας και ανοιγουμε το αρχειο src/CMakeLists.txt το οποίο είναι symlink
+
+	Έστω 
+	sudo gedit ~/ros/husky_kinetic/src/CMakeLists.txt
+
+7)Αντιγράφουμε όλο το περιεχόμενο σε ένα νέο αρχείο και το κρατάμε ανοιχτό
+
+8)Διαγράφουμε το παρόν CMakeLists.txt αρχείο (Απαιτεί δικαιώματα υπερχρήστη)
+
+	rm -rf ~/ros/husky_kinetic/src/CMakeLists.txt
+
+9)Αποθηκεύουμε το αρχείο που έχουμε ανοιχτό με όνομα **CMakeLists.txt**
+
+10)Κάνουμε ενα catkin_make ακόμη
+
+11)Ανοίγουμε το QTCreator βρίσκοντάς το απο το κουμπί αναζήτησης της Linux διανομής μας.
+
+12)Open Project -> Επιλέγουμε το CMakeLists.txt που φτιάξαμε
+
+13)Στον επόμενο διάλογο μας ζητάει ενα directory.Επιλεγουμε το ΦΑΚΕΛΟ $myROSDir/build και πατάμε Run CMake
+
+14)Οταν τελειώσει επιτυχώς κλείνουμε τον διάλογο 
+
+# Προσθήκη του Clang Format στο QT
+---------------
+
+1)Αποθηκεύουμε το αρχείο clang-format που βρίσκεται στο repository αυτό, κάπου τοπικά
+
+2)Ανοίγουμε το QT
+
+3)About->Plugins->C++ και επιλέγουμε τα Beautifier και ClangCodeModel
+
+4)Apply και επανεκκίνηση του QT
+
+5)Tools->Options->Beautifier
+
+6)Clang format -> Browse...επιλέγουμε το εκτελέσιμο που αποθήκευσαμε νωρίτερα και πατάμε Apply
+
+7)Πηγαίνουμε στην ταμπέλα C++ (Από το Tools->Options)->Code Model και επιλέγουμε Clang για τις γλώσσες C,C++
+
+8)Πηγαίνουμε στην ταμπέλα Environment (Από το Tools->Options)->External Tools και επιλέγουμε Add
+
+9)Βάζουμε ένα όνομα και προσθέτουμε στις παραμέτρους τα εξής
+
+	Arguments:-style="{BasedOnStyle: llvm, AccessModifierOffset: -4, BreakBeforeBinaryOperators: true, ColumnLimit: 80, Standard: Cpp11, IndentWidth: 4, BreakBeforeBraces: Linux}"
+
+	Output: Show in Pane
+	Error output: Show in Pane
+	Επιλέξτε το Modigies current document 
+
+Πατάμε apply και ok
+
+10)Τροποποιούμε τον κώδικα από Tools->beautifier->ClangFormat->Format Current Document
+
+
+	
