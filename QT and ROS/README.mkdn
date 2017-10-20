@@ -10,9 +10,9 @@
 
 1)Εκτελούμε 
 
-	sudo apt-get install ros-indigo-qt-create 
+	sudo apt-get install ros-kinetic-qt-create 
 
-	sudo apt-get install ros-indigo-qt-build
+	sudo apt-get install ros-kinetic-qt-build
 
 2)Ανοίγουμε, ως υπερχρήστες, το αρχείο /usr/share/applications/qtcreator.desktop
 
