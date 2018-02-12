@@ -52,11 +52,11 @@
 # Προσθήκη του Clang Format στο QT
 ---------------
 
-1)Αποθηκεύουμε το αρχείο clang-format που βρίσκεται στο repository αυτό, κάπου τοπικά
+1)Αποθηκεύουμε το αρχείο clang-format που βρίσκεται στο repository αυτό, κάπου τοπικά και δινουμε δικαιώματα εκτέλεσης
 
 2)Ανοίγουμε το QT
 
-3)About->Plugins->C++ και επιλέγουμε τα Beautifier και ClangCodeModel
+3)Help->About Plugins->C++ και επιλέγουμε τα Beautifier και ClangCodeModel
 
 4)Apply και επανεκκίνηση του QT
 
@@ -74,7 +74,7 @@
 
 	Output: Show in Pane
 	Error output: Show in Pane
-	Επιλέξτε το Modigies current document 
+	Επιλέξτε το Modifies current document 
 
 Πατάμε apply και ok
 
